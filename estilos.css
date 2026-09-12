@@ -1,0 +1,647 @@
+/* =========================
+CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #d98fa5;
+    color: #3a1f29;
+
+    font-family: Georgia, serif;
+
+    padding: 0 40px;
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+CORAZONES DE FONDO
+========================= */
+
+.corazones-fondo {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.corazones-fondo span {
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.24);
+
+    font-size: 45px;
+
+    user-select: none;
+}
+
+
+/* =========================
+POSICIONES
+========================= */
+
+.corazones-fondo span:nth-child(1) {
+    top: 8%;
+    left: 5%;
+    font-size: 70px;
+    transform: rotate(-15deg);
+}
+
+.corazones-fondo span:nth-child(2) {
+    top: 18%;
+    right: 12%;
+    font-size: 35px;
+    opacity: 0.7;
+}
+
+.corazones-fondo span:nth-child(3) {
+    top: 35%;
+    left: 12%;
+    font-size: 30px;
+    opacity: 0.6;
+}
+
+.corazones-fondo span:nth-child(4) {
+    top: 42%;
+    right: 5%;
+    font-size: 85px;
+    transform: rotate(15deg);
+    opacity: 0.8;
+}
+
+.corazones-fondo span:nth-child(5) {
+    top: 55%;
+    left: 3%;
+    font-size: 40px;
+    opacity: 0.65;
+}
+
+.corazones-fondo span:nth-child(6) {
+    top: 65%;
+    right: 15%;
+    font-size: 30px;
+    opacity: 0.7;
+}
+
+.corazones-fondo span:nth-child(7) {
+    top: 75%;
+    left: 15%;
+    font-size: 80px;
+    transform: rotate(-10deg);
+    opacity: 0.75;
+}
+
+.corazones-fondo span:nth-child(8) {
+    top: 82%;
+    right: 5%;
+    font-size: 45px;
+    opacity: 0.65;
+}
+
+.corazones-fondo span:nth-child(9) {
+    top: 92%;
+    left: 40%;
+    font-size: 28px;
+    opacity: 0.6;
+}
+
+.corazones-fondo span:nth-child(10) {
+    top: 28%;
+    left: 45%;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.corazones-fondo span:nth-child(11) {
+    top: 48%;
+    left: 48%;
+    font-size: 55px;
+    transform: rotate(12deg);
+    opacity: 0.55;
+}
+
+.corazones-fondo span:nth-child(12) {
+    top: 70%;
+    right: 38%;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+
+
+/* =========================
+CONTENIDO SOBRE EL FONDO
+========================= */
+
+.header,
+main,
+footer {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+.header {
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(58, 31, 41, 0.25);
+}
+
+.header h1 {
+    font-size: 18px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+
+    gap: 30px;
+}
+
+nav a {
+    font-family: monospace;
+
+    font-size: 12px;
+
+    color: #684450;
+
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #2b1720;
+}
+
+
+/* =========================
+INTRO
+========================= */
+
+.intro {
+    max-width: 850px;
+
+    margin: 130px auto 100px;
+
+    text-align: center;
+}
+
+.small-text {
+    font-family: monospace;
+
+    font-size: 11px;
+
+    color: #76505c;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.intro h2 {
+    font-size: 55px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+
+    color: #351c25;
+}
+
+.description {
+    max-width: 500px;
+
+    margin: auto;
+
+    color: #593b45;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+HISTORIAS
+========================= */
+
+.stories {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.story {
+    display: block;
+}
+
+.story img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter: grayscale(15%);
+
+    transition:
+        transform 0.5s,
+        filter 0.5s;
+}
+
+.story:hover img {
+    transform: scale(1.02);
+
+    filter: grayscale(0%);
+}
+
+.story-info {
+    padding-top: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.story-info span {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    color: #76505c;
+}
+
+.story-info h3 {
+    font-size: 15px;
+
+    font-weight: normal;
+
+    color: #351c25;
+}
+
+
+/* =========================
+SECCIÓN ESPECIAL
+========================= */
+
+.special {
+    max-width: 1000px;
+
+    margin: 150px auto;
+
+    padding: 60px 0;
+
+    border-top: 1px solid rgba(58, 31, 41, 0.25);
+
+    border-bottom: 1px solid rgba(58, 31, 41, 0.25);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.special span {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    color: #76505c;
+}
+
+.special h2 {
+    margin-top: 20px;
+
+    font-size: 35px;
+
+    font-weight: normal;
+
+    color: #351c25;
+}
+
+.special p {
+    color: #593b45;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.special a {
+    font-family: monospace;
+
+    font-size: 11px;
+
+    border-bottom: 1px solid #351c25;
+
+    padding-bottom: 5px;
+}
+
+
+/* =========================
+HISTORIA + IMÁGENES
+========================= */
+
+/*
+    IZQUIERDA → Texto
+    DERECHA  → Imagen
+*/
+
+.historia {
+    max-width: 1100px;
+
+    margin: 120px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================
+COLUMNA DEL TEXTO
+========================= */
+
+.historia-texto {
+    text-align: justify;
+}
+
+.historia-texto .small-text {
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+.historia-texto h2 {
+    font-size: 45px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+
+    color: #351c25;
+
+    text-align: left;
+}
+
+.historia-texto .description {
+    max-width: 500px;
+
+    margin: 0 0 20px 0;
+
+    color: #593b45;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+COLUMNA DE IMÁGENES
+========================= */
+
+.historia-imagenes {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.historia-imagenes img {
+    width: 100%;
+
+    max-width: 450px;
+
+    height: 550px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 15px 35px rgba(75, 27, 42, 0.20);
+
+    filter: grayscale(10%);
+
+    transition:
+        transform 0.5s,
+        filter 0.5s,
+        box-shadow 0.5s;
+}
+
+.historia-imagenes img:hover {
+    transform: scale(1.02);
+
+    filter: grayscale(0%);
+
+    box-shadow:
+        0 20px 40px rgba(75, 27, 42, 0.28);
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 0;
+
+    text-align: center;
+
+    color: #76505c;
+
+    font-family: monospace;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 0 20px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        height: auto;
+
+        padding: 25px 0;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    /* INTRO */
+
+    .intro {
+        margin-top: 80px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+    }
+
+
+    /* HISTORIAS */
+
+    .stories {
+        grid-template-columns: 1fr;
+    }
+
+    .story img {
+        height: 500px;
+    }
+
+
+    /* SECCIÓN ESPECIAL */
+
+    .special {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        margin: 100px auto;
+    }
+
+
+    /* HISTORIA + IMAGEN */
+
+    .historia {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        margin: 80px auto;
+    }
+
+
+    /* TEXTO */
+
+    .historia-texto {
+        text-align: justify;
+    }
+
+    .historia-texto h2 {
+        font-size: 40px;
+
+        text-align: left;
+    }
+
+    .historia-texto .description {
+        margin: 0 auto 20px;
+    }
+
+
+    /* IMAGEN */
+
+    .historia-imagenes img {
+        max-width: 450px;
+
+        height: 500px;
+    }
+
+
+    /* CORAZONES */
+
+    body::before {
+        font-size: 60px;
+
+        left: 2%;
+    }
+
+    body::after {
+        font-size: 80px;
+
+        right: 2%;
+    }
+
+}
